@@ -259,6 +259,8 @@ button{font:inherit}
 .contact-card h3{margin:0 0 12px}
 .contact-card p{margin:0 0 10px}
 .contact-note{font-size:13px;color:#ebf4ec}
+.contact-signature{justify-self:end;align-self:end;text-align:right;padding-top:24px}
+.contact-signature .contact-note{margin:0}
 
 .site-footer{
   background:#0d281d;color:#d9e7dd;padding:22px 0
