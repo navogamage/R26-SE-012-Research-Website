@@ -81,12 +81,3 @@ node --check script.js
 
 When reviewing the site manually, verify the responsive navigation, document links, contact-field validation, generated email content, copy fallback, and layouts at desktop and mobile widths.
 
-## Project team
-
-| Researcher | Email | Phone |
-|---|---|---|
-| Navoda H.G.J | [IT22070012@my.sliit.lk](mailto:IT22070012@my.sliit.lk) | +94 71 484 3381 |
-| Gunathunga P.C.I | [IT22087324@my.sliit.lk](mailto:IT22087324@my.sliit.lk) | +94 71 606 4250 |
-| Premathilaka G.G.R.T | [IT22079268@my.sliit.lk](mailto:IT22079268@my.sliit.lk) | +94 71 349 8585 |
-| Cassim T.S | [IT22217318@my.sliit.lk](mailto:IT22217318@my.sliit.lk) | +94 76 416 3540 |
-
