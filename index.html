@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Academic research information website for the black pepper research project documenting literature, methodology, documents, presentations, team and supervisors.">
   <title>PepperCare | Academic Research Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=20261010-brand5">
+  <link rel="stylesheet" href="styles.css?v=20261011-contact1">
 </head>
 <body>
 <div class="reading-progress" aria-hidden="true"></div>
@@ -351,12 +351,36 @@
         <span class="section-kicker">06 · CONTACT</span>
         <h2>Contact the project team</h2>
         <p>
-          Have a question about Pepper Care or our black pepper research? Reach out to any member of the team, or use our prepared email template to contact the full group.
+          Have a question about Pepper Care or our black pepper research? Complete the form to generate a ready-to-send email for the project team.
         </p>
-        <a class="btn contact-email-button" href="mailto:IT22070012@my.sliit.lk?cc=IT22087324%40my.sliit.lk%2CIT22079268%40my.sliit.lk%2CIT22217318%40my.sliit.lk&amp;subject=Pepper%20Care%20Research%20Inquiry&amp;body=Hello%20Pepper%20Care%20team%2C%0D%0A%0D%0AMy%20name%20is%20%5Byour%20name%5D.%20I%20am%20contacting%20you%20regarding%20%5Byour%20inquiry%5D.%0D%0A%0D%0AThank%20you.">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <span>Email the team</span>
-        </a>
+        <form class="contact-form" id="contact-form">
+          <div class="contact-field-row">
+            <div class="contact-field">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="contact-field">
+              <label for="contact-email">Your email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="contact-subject">Subject</label>
+            <input id="contact-subject" name="subject" type="text" value="Pepper Care Research Inquiry" required>
+          </div>
+          <div class="contact-field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="How can our research team help you?" required></textarea>
+          </div>
+          <div class="contact-form-actions">
+            <button class="btn contact-email-button" type="submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span>Open email app</span>
+            </button>
+            <button class="btn contact-copy-button" id="copy-email-template" type="button">Copy template</button>
+          </div>
+          <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite">Your message is generated locally and is not stored by this website.</p>
+        </form>
       </div>
 
       <div class="contact-directory" aria-label="Project team contact details">
@@ -433,6 +457,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261010-library3"></script>
+<script src="script.js?v=20261011-contact1"></script>
 </body>
 </html>

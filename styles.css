@@ -253,9 +253,24 @@ button{font:inherit}
 .contact-grid h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin:12px 0}
 .contact-grid p{color:#d8eadc;max-width:500px}
 .contact-intro{position:sticky;top:120px;align-self:start}
-.contact-email-button{gap:10px;margin-top:18px;background:#c9e79f;color:#15362a}
+.contact-form{display:grid;gap:13px;margin-top:25px;padding:20px;border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);background:rgba(255,255,255,.06);backdrop-filter:blur(10px)}
+.contact-field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.contact-field{display:grid;gap:6px}
+.contact-field label{color:#dbead7;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.contact-field input,.contact-field textarea{width:100%;border:1px solid rgba(255,255,255,.19);border-radius:9px;background:rgba(5,28,21,.3);color:#fff;font:inherit;font-size:12px;line-height:1.5;padding:10px 12px;outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
+.contact-field textarea{min-height:92px;resize:vertical}
+.contact-field input::placeholder,.contact-field textarea::placeholder{color:#9eb2a3}
+.contact-field input:focus,.contact-field textarea:focus{border-color:#c9e79f;background:rgba(5,28,21,.48);box-shadow:0 0 0 3px rgba(201,231,159,.12)}
+.contact-form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
+.contact-form-actions .btn{border:0;cursor:pointer;min-height:42px}
+.contact-email-button{gap:10px;background:#c9e79f;color:#15362a}
 .contact-email-button:hover{background:#dcf3bb}
 .contact-email-button svg{width:19px;height:19px;flex:0 0 auto}
+.contact-copy-button{border:1px solid rgba(255,255,255,.24)!important;background:transparent;color:#fff}
+.contact-copy-button:hover{background:rgba(255,255,255,.08)}
+.contact-grid .contact-form-status{max-width:none;margin:0;color:#aebfb2;font-size:10px;line-height:1.55}
+.contact-grid .contact-form-status.is-success{color:#d5efa9}
+.contact-grid .contact-form-status.is-error{color:#ffd0c7}
 .contact-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .contact-card{
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
@@ -312,6 +327,8 @@ button{font:inherit}
   .section-heading{flex-direction:column;align-items:flex-start}
   .team-grid{grid-template-columns:1fr}
   .contact-directory{grid-template-columns:1fr}
+  .contact-field-row{grid-template-columns:1fr}
+  .contact-form-actions .btn{width:100%}
   .contact-directory .contact-note{text-align:left}
   .timeline-item{grid-template-columns:52px 1fr}
   .person-meta h3,.doc-card h3,.timeline-item h3{font-size:20px}
