@@ -248,19 +248,29 @@ button{font:inherit}
   color:#fff
 }
 .contact-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center
+  display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:54px;align-items:center
 }
 .contact-grid h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin:12px 0}
 .contact-grid p{color:#d8eadc;max-width:500px}
+.contact-intro{position:sticky;top:120px;align-self:start}
+.contact-email-button{gap:10px;margin-top:18px;background:#c9e79f;color:#15362a}
+.contact-email-button:hover{background:#dcf3bb}
+.contact-email-button svg{width:19px;height:19px;flex:0 0 auto}
+.contact-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .contact-card{
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
-  padding:26px;border-radius:var(--radius);backdrop-filter:blur(10px)
+  padding:22px;border-radius:var(--radius);backdrop-filter:blur(10px)
 }
-.contact-card h3{margin:0 0 12px}
-.contact-card p{margin:0 0 10px}
+.contact-card-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.contact-avatar{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:#c9e79f;color:#15362a;font-size:12px;font-weight:800;letter-spacing:.04em}
+.contact-role{display:block;margin-bottom:1px;color:#c9e79f;font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.contact-card h3{margin:0;font-size:16px;line-height:1.3}
+.contact-link{display:flex;align-items:center;gap:9px;width:fit-content;max-width:100%;padding:5px 0;color:#d8eadc;font-size:11px;line-height:1.45;overflow-wrap:anywhere;transition:color .2s ease}
+.contact-link:hover{color:#fff}
+.contact-link:focus-visible{outline-color:#c9e79f;outline-offset:3px}
+.contact-link svg{width:16px;height:16px;flex:0 0 16px;color:#c9e79f}
 .contact-note{font-size:13px;color:#ebf4ec}
-.contact-signature{justify-self:end;align-self:end;text-align:right;padding-top:24px}
-.contact-signature .contact-note{margin:0}
+.contact-directory .contact-note{grid-column:1/-1;max-width:none;margin:5px 0 0;text-align:right}
 
 .site-footer{
   background:#0d281d;color:#d9e7dd;padding:22px 0
@@ -284,6 +294,7 @@ button{font:inherit}
   }
   .nav-links.open{display:flex}
   .intro-grid,.domain-grid,.component-grid,.doc-grid,.contact-grid{grid-template-columns:1fr}
+  .contact-intro{position:static}
   .component-card{grid-template-columns:1fr}
 }
 @media (max-width: 620px){
@@ -300,6 +311,8 @@ button{font:inherit}
   .section{padding:68px 0}
   .section-heading{flex-direction:column;align-items:flex-start}
   .team-grid{grid-template-columns:1fr}
+  .contact-directory{grid-template-columns:1fr}
+  .contact-directory .contact-note{text-align:left}
   .timeline-item{grid-template-columns:52px 1fr}
   .person-meta h3,.doc-card h3,.timeline-item h3{font-size:20px}
   .footer-inner{flex-direction:column;align-items:flex-start}
