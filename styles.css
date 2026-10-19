@@ -1,6 +1,7 @@
-
+/* Import the primary typeface used throughout the website. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+/* Shared design values keep colors, spacing, shadows, and widths consistent. */
 :root{
   --bg:#f6faf7;
   --surface:#ffffff;
@@ -21,6 +22,7 @@
   --max:1180px;
 }
 
+/* Global defaults create predictable sizing, typography, links, and accessibility behavior. */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:86px}
 body{
@@ -37,6 +39,7 @@ button{font:inherit}
 .skip-link{position:absolute;left:-999px;top:auto}
 .skip-link:focus{left:18px;top:18px;background:#fff;padding:10px 12px;border-radius:8px;z-index:200}
 
+/* Header, brand, desktop navigation, and mobile menu button. */
 .site-header{
   position:sticky;top:0;z-index:100;
   background:rgba(246,250,247,.94);
@@ -61,6 +64,7 @@ button{font:inherit}
 .nav-links a.active{color:var(--green-600);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
 .menu-toggle{display:none;background:none;border:none;font-size:25px;color:var(--green-850);cursor:pointer}
 
+/* Hero layout, call-to-action buttons, statistics, and decorative background. */
 .hero{
   position:relative;overflow:hidden;
   background:radial-gradient(circle at 85% 18%, rgba(112,176,131,.2), transparent 30%), linear-gradient(135deg, #102f23 0%, #184632 48%, #1f5d40 100%);
@@ -102,6 +106,7 @@ button{font:inherit}
 .hero-stats strong{display:block;font-size:26px;font-weight:800}
 .hero-stats span{font-size:12px;color:#d0e7d5}
 
+/* Animated visual that represents the three main black pepper research subjects. */
 .hero-visual{
   position:relative;
   height:500px;
@@ -133,6 +138,7 @@ button{font:inherit}
 .berry-float{bottom:20px;left:70px;animation:floaty 5.2s ease-in-out infinite}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
+/* Shared section spacing, headings, and alternate backgrounds. */
 .section{padding:88px 0}
 .intro-strip{padding:34px 0;border-bottom:1px solid var(--border);background:#fff}
 .intro-grid{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center}
@@ -146,6 +152,7 @@ button{font:inherit}
 .section-heading p{max-width:380px;color:var(--muted);font-size:14px}
 .alt-section{background:var(--surface-alt)}
 
+/* Research foundation information panels. */
 .domain-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
 }
@@ -156,6 +163,7 @@ button{font:inherit}
 .info-panel h3{margin:0 0 8px;font-size:20px;line-height:1.2}
 .info-panel p{margin:0;color:var(--muted);font-size:14px}
 
+/* Cards that explain the four student research components. */
 .subheading{margin:52px 0 18px}
 .subheading h3{margin:0;font-size:26px;letter-spacing:-.03em}
 .component-grid{
@@ -178,6 +186,7 @@ button{font:inherit}
 .component-card p{margin:0 0 8px;color:var(--muted);font-size:14px}
 .component-card small{font-weight:700;color:var(--green-850)}
 
+/* Academic milestone timeline and date labels. */
 .timeline{max-width:900px;margin:0 auto}
 .timeline-item{
   display:grid;grid-template-columns:64px 1fr;gap:18px;
@@ -195,6 +204,7 @@ button{font:inherit}
   background:#e2f0e4;color:var(--green-800);font-size:12px;font-weight:700
 }
 
+/* Shared layout and controls for proposal, checklist, and presentation files. */
 .library-head{
   display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px
 }
@@ -222,6 +232,7 @@ button{font:inherit}
   margin-top:20px;padding:18px 20px;background:#edf5ee;border-left:4px solid var(--green-600);border-radius:14px;color:var(--green-850)
 }
 
+/* Student and supervisor profile card grids. */
 .team-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:18px
 }
@@ -243,6 +254,7 @@ button{font:inherit}
 .person-meta p{margin:0;color:var(--muted);font-size:14px}
 .supervisor-head{margin-top:40px}
 
+/* Contact form, researcher directory, and contact status messages. */
 .contact-section{
   background:linear-gradient(135deg,var(--green-900),var(--green-800));
   color:#fff
@@ -287,6 +299,7 @@ button{font:inherit}
 .contact-note{font-size:13px;color:#ebf4ec}
 .contact-directory .contact-note{grid-column:1/-1;max-width:none;margin:5px 0 0;text-align:right}
 
+/* Footer layout and typography. */
 .site-footer{
   background:#0d281d;color:#d9e7dd;padding:22px 0
 }
@@ -294,6 +307,7 @@ button{font:inherit}
 .footer-inner p{margin:0;font-size:13px}
 .footer-inner a{font-size:13px;font-weight:700}
 
+/* Base responsive rules for tablets, mobile navigation, and small screens. */
 @media (max-width: 1100px){
   .hero-grid{grid-template-columns:1fr;gap:24px}
   .hero-visual{height:390px}
@@ -335,7 +349,7 @@ button{font:inherit}
   .footer-inner{flex-direction:column;align-items:flex-start}
 }
 
-/* Contemporary research portfolio */
+/* Contemporary visual refinements applied over the base component styles. */
 :root{--bg:#fafbf7;--surface-alt:#f0f3eb;--green-900:#102e25;--green-850:#193c30;--green-800:#214b39;--green-600:#39704e;--muted:#687269;--border:#e0e6dc;--shadow:0 8px 30px rgba(24,55,38,.035);--radius:18px;--max:1200px}
 body{background:var(--bg);-webkit-font-smoothing:antialiased}
 ::selection{background:#d7ecaa;color:#15362a}

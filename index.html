@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="styles.css?v=20261019-library1">
 </head>
 <body>
+<!-- Accessibility helpers show reading progress and provide a keyboard shortcut to the main content. -->
 <div class="reading-progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- Sticky header containing the PepperCare brand and primary navigation. -->
 <header class="site-header">
   <div class="container nav-container">
     <a href="#home" class="brand" aria-label="PepperCare home">
@@ -28,6 +30,7 @@
       <strong>PepperCare</strong>
     </a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">☰</button>
+    <!-- These links move visitors to the main sections of this single-page website. -->
     <nav id="navMenu" class="nav-links">
       <a href="#home">Home</a>
       <a href="#domain">Domain</a>
@@ -40,7 +43,9 @@
   </div>
 </header>
 
+<!-- Main page content begins here. -->
 <main id="main">
+  <!-- Hero section introducing the research project and its main statistics. -->
   <section class="hero" id="home">
     <div class="hero-pattern"></div>
     <div class="container hero-grid">
@@ -93,6 +98,7 @@
 
 
 
+  <!-- Research domain section explaining the foundation and four project components. -->
   <section class="section" id="domain">
     <div class="container">
       <div class="section-heading">
@@ -116,6 +122,7 @@
         <h3>Component overview</h3>
       </div>
 
+      <!-- Each card summarizes one student research component. -->
       <div class="component-grid">
         <article class="component-card">
           <div class="component-media"><svg class="component-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 42C7 22 24 10 48 12c0 13-4 24-13 29M12 51l25-26M23 40l-1-12"/><circle cx="43" cy="45" r="10"/><path d="m50 52 7 7M39 45h8M43 41v8"/></svg></div>
@@ -160,6 +167,7 @@
     </div>
   </section>
 
+  <!-- Milestone timeline showing the major academic assessment dates. -->
   <section class="section alt-section" id="milestones">
     <div class="container">
       <div class="section-heading">
@@ -179,6 +187,7 @@
     </div>
   </section>
 
+  <!-- Research library containing proposals and assessment checklists. -->
   <section class="section" id="documents">
     <div class="container">
       <div class="section-heading">
@@ -188,6 +197,7 @@
         </div>
       </div>
 
+      <!-- Project proposal documents open or download from SharePoint. -->
       <div class="library-head proposal-heading"><div><span class="proposal-eyebrow">RESEARCH COLLECTION</span><h3>Project proposals</h3></div><span class="counter">04 Documents</span></div>
       <div class="doc-grid proposal-grid">
     <article class="doc-card proposal-card">
@@ -230,6 +240,7 @@
       </div>
     </article></div>
 
+      <!-- Checklist 2 uses the video modal; the PDF checklists open through SharePoint. -->
       <div class="library-head library-gap"><h3>Checklist documents</h3><span class="counter">03 Files</span></div>
       <div class="doc-grid checklist-grid">
     <article class="doc-card proposal-card checklist-card">
@@ -266,6 +277,7 @@
     </div>
   </section>
 
+  <!-- Presentation archive containing proposal, progress, and final slide decks. -->
   <section class="section alt-section" id="presentations">
     <div class="container">
       <div class="section-heading">
@@ -319,6 +331,7 @@
     </div>
   </section>
 
+  <!-- Team section listing student researchers and academic supervisors. -->
   <section class="section" id="about">
     <div class="container">
       <div class="section-heading">
@@ -328,6 +341,7 @@
         </div>
       </div>
 
+      <!-- Student cards connect each researcher with their assigned component. -->
       <div class="subheading"><h3>Student researchers</h3></div>
       <div class="team-grid">
 <article class="person-card">
@@ -350,6 +364,7 @@
   <div class="person-meta"><span class="tiny-label">Group member</span><h3>Cassim T.S</h3><p>Berry Disease Detection</p></div>
 </article></div>
 
+      <!-- Supervisor cards identify the academic and external project guidance. -->
       <div class="subheading supervisor-head"><h3>Supervisors</h3></div>
       <div class="supervisor-grid">
 <article class="person-card supervisor-card">
@@ -369,6 +384,7 @@
     </div>
   </section>
 
+  <!-- Contact section for preparing an email and viewing team contact details. -->
   <section class="section contact-section" id="contact">
     <div class="container contact-grid">
       <div class="contact-intro">
@@ -377,6 +393,7 @@
         <p>
           Have a question about Pepper Care or our black pepper research? Complete the form to generate a ready-to-send email for the project team.
         </p>
+        <!-- This form creates an email locally; it does not send or store messages. -->
         <form class="contact-form" id="contact-form">
           <div class="contact-field-row">
             <div class="contact-field">
@@ -407,6 +424,7 @@
         </form>
       </div>
 
+      <!-- Direct email and telephone links for each student researcher. -->
       <div class="contact-directory" aria-label="Project team contact details">
         <article class="contact-card">
           <div class="contact-card-head">
@@ -474,6 +492,7 @@
   </section>
 </main>
 
+<!-- Pop-up player used by the Checklist 2 video button. -->
 <dialog class="video-modal" id="checklist-video-modal" aria-labelledby="checklist-video-title">
   <div class="video-modal-shell">
     <div class="video-modal-header">
@@ -495,6 +514,7 @@
   </div>
 </dialog>
 
+<!-- Simple page footer with a link back to the hero section. -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>Pepper Care · Academic Research Portfolio</p>
@@ -502,6 +522,7 @@
   </div>
 </footer>
 
+<!-- The website behavior is kept in one external JavaScript file. -->
 <script src="script.js?v=20261019-library1"></script>
 </body>
 </html>

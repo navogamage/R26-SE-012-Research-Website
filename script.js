@@ -1,4 +1,4 @@
-
+// Track the active section in the primary navigation.
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav-links');
 if (nav) {
@@ -43,6 +43,7 @@ if (nav) {
   window.addEventListener('load', scheduleUpdate);
   updateActiveLink();
 }
+// Control the basic open and close state of the mobile menu.
 if (toggle && nav){
   toggle.addEventListener('click', () => {
     // Open or close the mobile navigation menu.
@@ -62,6 +63,7 @@ if (toggle && nav){
   });
 }
 
+// Reveal content while scrolling unless the visitor prefers reduced motion.
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
   const observer = new IntersectionObserver(entries => {
@@ -90,6 +92,7 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
   });
 }
 
+// Update the reading progress bar and sticky header during scrolling.
 const progress = document.querySelector('.reading-progress');
 let progressScheduled = false;
 function updateProgress() {
@@ -111,6 +114,7 @@ window.addEventListener('resize', scheduleProgress);
 window.addEventListener('load', scheduleProgress);
 updateProgress();
 
+// Add accessible ways to close the mobile navigation menu.
 if (toggle && nav) {
   function closeMenu() {
     // Return the mobile navigation menu to its closed state.
@@ -141,6 +145,7 @@ if (toggle && nav) {
   });
 }
 
+// Manage the Checklist 2 SharePoint video modal.
 const videoModal = document.querySelector('#checklist-video-modal');
 const videoModalFrame = videoModal?.querySelector('iframe');
 const videoModalClose = videoModal?.querySelector('.video-modal-close');
@@ -178,6 +183,7 @@ if (videoModal && videoModalFrame && videoModalClose) {
   });
 }
 
+// Generate and copy contact email content without storing form data.
 const contactForm = document.querySelector('#contact-form');
 const copyEmailTemplateButton = document.querySelector('#copy-email-template');
 const contactFormStatus = document.querySelector('#contact-form-status');
