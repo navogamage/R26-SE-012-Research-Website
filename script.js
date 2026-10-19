@@ -123,6 +123,38 @@ if (toggle && nav) {
   });
 }
 
+const videoModal = document.querySelector('#checklist-video-modal');
+const videoModalFrame = videoModal?.querySelector('iframe');
+const videoModalClose = videoModal?.querySelector('.video-modal-close');
+let videoModalTrigger = null;
+
+function closeVideoModal() {
+  if (!videoModal?.open) return;
+  videoModal.close();
+}
+
+if (videoModal && videoModalFrame && videoModalClose) {
+  document.querySelectorAll('.video-modal-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const videoUrl = trigger.dataset.videoUrl;
+      if (!videoUrl) return;
+      videoModalTrigger = trigger;
+      videoModalFrame.src = videoUrl;
+      videoModal.showModal();
+    });
+  });
+
+  videoModalClose.addEventListener('click', closeVideoModal);
+  videoModal.addEventListener('click', event => {
+    if (event.target === videoModal) closeVideoModal();
+  });
+  videoModal.addEventListener('close', () => {
+    videoModalFrame.removeAttribute('src');
+    videoModalTrigger?.focus();
+    videoModalTrigger = null;
+  });
+}
+
 const contactForm = document.querySelector('#contact-form');
 const copyEmailTemplateButton = document.querySelector('#copy-email-template');
 const contactFormStatus = document.querySelector('#contact-form-status');
